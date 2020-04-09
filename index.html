@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.A,.A1,.A2,.A3,.B, .Submit{
+  background-color: #4CAF50;
+  color: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 24px;
+ 
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+<Table  width=100% height="500px">
+<tr height="450px">
+	<td width=20%>
+		<div class="hudini">
+<table id="tbl" valign="top" align="left" width=100%><tr><td>
+<table>
+<tr>
+<td>
+<div id="nameDIV">Hello</div>
+</td>
+<td>
+<div id="dateDIV">Hello</div>
+</td>
+</tr>
+</table>
+<table id="xyz" border="1">
+<tr>
+<td>
+<div>1</div>
+</td>
+<td>
+<div id="inDIV2">Hello</div>
+<div id="myDIV2">Hello</div>
+</td>
+
+<td>
+<div>2</div>
+</td>
+<td>
+<div id="inDIV3">Hello</div>
+<div id="myDIV3">Hello</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>3</div>
+</td>
+<td>
+<div id="inDIV4">Hello</div>
+<div id="myDIV4">Hello</div>
+<div id="clickDIV4">Hello</div>
+</td>
+
+<td>
+<div>4</div>
+</td>
+<td>
+<div id="inDIV5">Hello</div>
+<div id="myDIV5">Hello</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>5</div>
+</td>
+<td>
+<div id="inDIV6">Hello</div>
+<div id="myDIV6">Hello</div>
+<div id="clickDIV6">Hello</div>
+</td>
+
+<td>
+<div>6</div>
+</td>
+<td>
+<div id="inDIV7">Hello</div>
+<div id="myDIV7">Hello</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>7</div>
+</td>
+<td>
+<div id="inDIV8">Hello</div>
+<div id="myDIV8">Hello</div>
+</td>
+
+<td>
+<div>8</div>
+</td>
+<td>
+<div id="inDIV9">Hello</div>
+<div id="myDIV9">Hello</div>
+<div id="clickDIV9">Hello</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>9</div>
+</td>
+<td>
+<div id="inDIV10">Hello</div>
+<div id="myDIV10">Hello</div>
+</td>
+
+<td>
+<div>10</div>
+</td>
+<td>
+<div id="inDIV11">Hello</div>
+<div id="myDIV11">Hello</div>
+<div id="clickDIV11">Hello</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div>11</div>
+</td>
+<td>
+<div id="inDIV12">Hello</div>
+<div id="myDIV12">Hello</div>
+</td>
+
+
+
+<td>
+
+</td>
+<td>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+</td></tr></table>
+</div>
+
+</td>
+<td width=60% >
+				<div id="myHeader" border="2">
+					<img id="myImg" src="0.jpg"  >
+				</div>
+</td>
+<td width=20% valign="top" align="right">
+<div border="2" class="hudini2">
+<Table width=70% border="2">
+<tr>
+<td>
+Name:<br> <input type="text" id="myName" value=""><br>
+Date of birth:<br> <input type="text" id="myDate" value=""><br>
+
+</td>
+</tr>
+<tr>
+<td>
+<button onclick="myFunction(5)" class="Submit">Submit</button>
+</td>
+</tr>
+<tr>
+<td>
+<div class="hudini3">
+<!--<form class="hudini3" action="test2.php" method="">
+<button class="Submit" type="Submit" name="buton">eredmeny kuldese</button>
+</form>-->
+<button class="Submit" onclick="exportTableToExcel('tbl', 'Tablazat')">eredmeny kuldese</button>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td width=20%>
+</td>
+<td width=60%>
+<table width=100% 	 height="50px">
+	<tr>
+	<td width=20%>
+	<button onclick="myFunction(1)" class="A" id="button">A</button></td>
+	<td width=20%>
+	<button onclick="myFunction(2)" class="A1">B</button></td>
+	<td width=20%>
+	<button onclick="myFunction(3)" class="A2">C</button></td>
+	<td width=20%>
+	<button onclick="myFunction(4)" class="A3">D</button></td>
+	<td width=20%>
+	<button onclick="myFunction(5)" class="B">Next</button></td>
+	
+	</tr>
+	</table>
+</td>
+<td width=20%>
+</td>
+</tr>
+</Table>
+
+
+
+
+
+
+<script>
+
+var clicks = 1;
+
+	element2 = document.querySelector('.hudini'); 
+	element2.style.visibility = 'hidden'; 
+    
+    element2 = document.querySelector('.hudini3'); 
+	element2.style.visibility = 'hidden'; 
+	
+	element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'hidden'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+
+function myFunction(help) {
+  
+  if (clicks == 1 ){
+  document.getElementById("myImg").src = "1.jpg";
+  
+  element2 = document.querySelector('.hudini2'); 
+	element2.style.visibility = 'hidden'; 
+    
+      element2 = document.querySelector('.hudini3'); 
+	element2.style.visibility = 'hidden'; 
+ 
+	element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+	
+	element2 = document.querySelector('.hudini'); 
+	element2.style.visibility = 'hidden'; 
+	
+	var namee = document.getElementById("myName").value;
+	var datee = document.getElementById("myDate").value;
+	
+	var x = document.getElementById("nameDIV");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("nameDIV").innerHTML = namee;
+		}
+			
+	var x = document.getElementById("dateDIV");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("dateDIV").innerHTML = datee;
+		}
+		
+	var x = document.getElementById("inDIV2");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV2").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}	
+	
+	
+  
+		
+		 
+  if (clicks == 2 ){
+  document.getElementById("myImg").src = "2.jpg";	
+  
+	element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+  
+  var x = document.getElementById("myDIV2");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV2").innerHTML = d.toLocaleTimeString();
+		}
+	var x = document.getElementById("inDIV3");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV3").innerHTML = d.toLocaleTimeString();
+		}
+	}	
+	
+	if (clicks == 3 ){
+	document.getElementById("myImg").src = "3.jpg";	
+	
+	 element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'hidden'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'visible'; 
+	
+	var x = document.getElementById("myDIV3");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV3").innerHTML = d.toLocaleTimeString();
+		}
+		  var x = document.getElementById("inDIV4");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV4").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}
+	if (clicks == 4 ){
+	document.getElementById("myImg").src = "4.jpg";	
+	
+	element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+		var x = document.getElementById("myDIV4");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("myDIV4").innerHTML = d.toLocaleTimeString();
+			}
+			  var x = document.getElementById("inDIV5");
+					if (x.innerHTML === "Hello") {
+					var d = new Date();
+					document.getElementById("inDIV5").innerHTML = d.toLocaleTimeString();
+				}
+		if (help == 1) {
+			var x = document.getElementById("clickDIV4");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV4").innerHTML = "A";
+				}
+			
+		}
+		else if (help == 2) {
+			var x = document.getElementById("clickDIV4");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV4").innerHTML = "B";
+			}
+		}
+		else if (help == 3) {
+			var x = document.getElementById("clickDIV4");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV4").innerHTML = "C";
+			}
+		}
+		else if (help == 4) {
+			var x = document.getElementById("clickDIV4");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV4").innerHTML = "D";
+			}
+		}
+	
+	
+		
+	}
+	if (clicks == 5 ){
+	document.getElementById("myImg").src = "5.jpg";	
+	
+	 element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'hidden'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'visible'; 
+	
+	var x = document.getElementById("myDIV5");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV5").innerHTML = d.toLocaleTimeString();
+		}
+	var x = document.getElementById("inDIV6");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV6").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}
+	if (clicks == 6 ){
+	document.getElementById("myImg").src = "6.jpg";	
+	
+	element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+		var x = document.getElementById("myDIV6");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("myDIV6").innerHTML = d.toLocaleTimeString();
+			}
+			  var x = document.getElementById("inDIV7");
+					if (x.innerHTML === "Hello") {
+					var d = new Date();
+					document.getElementById("inDIV7").innerHTML = d.toLocaleTimeString();
+				}
+		if (help == 1) {
+			var x = document.getElementById("clickDIV6");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV6").innerHTML = "A";
+				}
+			
+		}
+		else if (help == 2) {
+			var x = document.getElementById("clickDIV6");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV6").innerHTML = "B";
+			}
+		}
+		else if (help == 3) {
+			var x = document.getElementById("clickDIV6");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV6").innerHTML = "C";
+			}
+		}
+		else if (help == 4) {
+			var x = document.getElementById("clickDIV6");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV6").innerHTML = "D";
+			}
+		}
+	
+	
+		
+	}
+	if (clicks == 7 ){
+	document.getElementById("myImg").src = "7.jpg";	
+	
+			element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+	
+	
+	
+	var x = document.getElementById("myDIV7");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV7").innerHTML = d.toLocaleTimeString();
+		}
+		var x = document.getElementById("inDIV8");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV8").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}
+	if (clicks == 8 ){
+	document.getElementById("myImg").src = "8.jpg";	
+	
+		 element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'hidden'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'visible'; 
+	
+	var x = document.getElementById("myDIV8");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV8").innerHTML = d.toLocaleTimeString();
+		}
+		var x = document.getElementById("inDIV9");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV9").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}
+	if (clicks == 9 ){
+	document.getElementById("myImg").src = "9.jpg";	
+	
+		element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+
+			var x = document.getElementById("myDIV9");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("myDIV9").innerHTML = d.toLocaleTimeString();
+			}
+			  var x = document.getElementById("inDIV10");
+					if (x.innerHTML === "Hello") {
+					var d = new Date();
+					document.getElementById("inDIV10").innerHTML = d.toLocaleTimeString();
+				}
+		if (help == 1) {
+			var x = document.getElementById("clickDIV9");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV9").innerHTML = "A";
+				}
+			
+		}
+		else if (help == 2) {
+			var x = document.getElementById("clickDIV9");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV9").innerHTML = "B";
+			}
+		}
+		else if (help == 3) {
+			var x = document.getElementById("clickDIV9");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV9").innerHTML = "C";
+			}
+		}
+		else if (help == 4) {
+			var x = document.getElementById("clickDIV9");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV9").innerHTML = "D";
+			}
+		}
+	
+	
+		
+	}
+	if (clicks == 10 ){
+	document.getElementById("myImg").src = "10.jpg";	
+	
+		 element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'hidden'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'visible'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'visible'; 
+	
+	var x = document.getElementById("myDIV10");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV10").innerHTML = d.toLocaleTimeString();
+		}
+		var x = document.getElementById("inDIV11");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("inDIV11").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}
+	if (clicks == 11 ){
+	document.getElementById("myImg").src = "11.jpg";	
+	
+		element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'visible'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+	
+			var x = document.getElementById("myDIV11");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("myDIV11").innerHTML = d.toLocaleTimeString();
+			}
+			  var x = document.getElementById("inDIV12");
+					if (x.innerHTML === "Hello") {
+					var d = new Date();
+					document.getElementById("inDIV12").innerHTML = d.toLocaleTimeString();
+				}
+		if (help == 1) {
+			var x = document.getElementById("clickDIV11");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV11").innerHTML = "A";
+				}
+			
+		}
+		else if (help == 2) {
+			var x = document.getElementById("clickDIV11");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV11").innerHTML = "B";
+			}
+		}
+		else if (help == 3) {
+			var x = document.getElementById("clickDIV11");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV11").innerHTML = "C";
+			}
+		}
+		else if (help == 4) {
+			var x = document.getElementById("clickDIV11");
+				if (x.innerHTML === "Hello") {
+				var d = new Date();
+				document.getElementById("clickDIV11").innerHTML = "D";
+			}
+		}
+	
+	
+		
+	}
+	if (clicks == 12 ){
+  document.getElementById("myImg").src = "12.jpg";	
+  
+	element1 = document.querySelector('.B'); 
+	element1.style.visibility = 'hidden'; 
+        
+	element2 = document.querySelector('.A'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A1'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A2'); 
+	element2.style.visibility = 'hidden'; 
+	element2 = document.querySelector('.A3'); 
+	element2.style.visibility = 'hidden'; 
+	
+	element1 = document.querySelector('.hudini'); 
+	element1.style.visibility = 'visible';
+      element2 = document.querySelector('.hudini3'); 
+	element2.style.visibility = 'visible'; 
+  
+  var x = document.getElementById("myDIV12");
+		if (x.innerHTML === "Hello") {
+			var d = new Date();
+			document.getElementById("myDIV12").innerHTML = d.toLocaleTimeString();
+		}
+		
+	}	
+	
+
+  clicks += 1;
+  
+}
+
+//export to Excel
+function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+
+    
+		
+
+
+
+
+</script>
+
+</body>
+</html>
+
