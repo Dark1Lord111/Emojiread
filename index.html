@@ -34,9 +34,6 @@
 <table>
 <tr>
 <td>
-<div id="nameDIV">Hello</div>
-</td>
-<td>
 <div id="dateDIV">Hello</div>
 </td>
 </tr>
@@ -177,7 +174,6 @@
 <Table width=70% border="2">
 <tr>
 <td>
-Name:<br> <input type="text" id="myName" value=""><br>
 Date of birth:<br> <input type="text" id="myDate" value=""><br>
 
 </td>
@@ -278,14 +274,8 @@ function myFunction(help) {
 	element2 = document.querySelector('.hudini'); 
 	element2.style.visibility = 'hidden'; 
 	
-	var namee = document.getElementById("myName").value;
 	var datee = document.getElementById("myDate").value;
 	
-	var x = document.getElementById("nameDIV");
-		if (x.innerHTML === "Hello") {
-			var d = new Date();
-			document.getElementById("nameDIV").innerHTML = namee;
-		}
 			
 	var x = document.getElementById("dateDIV");
 		if (x.innerHTML === "Hello") {
