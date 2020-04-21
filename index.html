@@ -33,7 +33,6 @@
 <table id="tbl" valign="top" align="left" width=100%><tr><td>
 <table>
 <tr>
-
 <td>
 <div id="dateDIV">Hello</div>
 </td>
@@ -175,7 +174,6 @@
 <Table width=70% border="2">
 <tr>
 <td>
-
 Date of birth:<br> <input type="text" id="myDate" value=""><br>
 
 </td>
@@ -189,9 +187,9 @@ Date of birth:<br> <input type="text" id="myDate" value=""><br>
 <td>
 <div class="hudini3">
 <!--<form class="hudini3" action="test2.php" method="">
-<button class="Submit" type="Submit" name="buton">eredmeny kuldese</button>
+<button class="Submit" type="Submit" name="buton">Eredmény letöltése</button>
 </form>-->
-<button class="Submit" onclick="exportTableToExcel('tbl', 'Tablazat')">eredmeny kuldese</button>
+<button class="Submit" onclick="exportTableToExcel('tbl', 'Tablazat')">Eredmény letöltése</button>
 </td>
 </tr>
 </table>
@@ -276,10 +274,8 @@ function myFunction(help) {
 	element2 = document.querySelector('.hudini'); 
 	element2.style.visibility = 'hidden'; 
 	
-	
 	var datee = document.getElementById("myDate").value;
 	
-
 			
 	var x = document.getElementById("dateDIV");
 		if (x.innerHTML === "Hello") {
